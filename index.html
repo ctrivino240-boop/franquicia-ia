@@ -1,0 +1,634 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Franquicia IA – Activa tu negocio digital hoy | Tribah IA</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy:     #1B2A4A;
+    --blue:     #3B6FE8;
+    --bg-soft:  #EEF2FA;
+    --white:    #FFFFFF;
+    --text:     #1B2A4A;
+    --mid:      #5A6A8A;
+    --border:   #D4DCF0;
+    --radius:   50px;
+    --radius-card: 16px;
+  }
+
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--white);
+    color: var(--text);
+    font-size: 16px;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* ── TOPBAR ── */
+  .topbar {
+    background: var(--navy);
+    color: rgba(255,255,255,.85);
+    text-align: center;
+    padding: 10px 16px;
+    font-size: 13px;
+    font-weight: 500;
+  }
+  .topbar span { color: #7EB3FF; font-weight: 600; }
+
+  /* ── NAV ── */
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 6%;
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 99;
+  }
+  .logo {
+    font-family: 'DM Serif Display', serif;
+    font-size: 22px;
+    color: var(--navy);
+    text-decoration: none;
+  }
+  .logo span { color: var(--blue); }
+  .nav-cta {
+    background: var(--navy);
+    color: #fff;
+    border: none;
+    padding: 11px 24px;
+    border-radius: var(--radius);
+    font-weight: 600;
+    font-size: 13px;
+    cursor: pointer;
+    text-decoration: none;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    transition: background .2s;
+  }
+  .nav-cta:hover { background: var(--blue); }
+
+  /* ── HERO ── */
+  .hero {
+    background: var(--bg-soft);
+    padding: 80px 6% 72px;
+    text-align: center;
+  }
+  .hero-eyebrow {
+    display: inline-block;
+    background: rgba(59,111,232,.1);
+    border: 1px solid rgba(59,111,232,.25);
+    color: var(--blue);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    padding: 6px 18px;
+    border-radius: var(--radius);
+    margin-bottom: 28px;
+  }
+  .hero h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(34px, 5vw, 60px);
+    line-height: 1.1;
+    color: var(--navy);
+    max-width: 780px;
+    margin: 0 auto 22px;
+  }
+  .hero h1 em { color: var(--blue); font-style: italic; }
+  .hero-sub {
+    color: var(--mid);
+    font-size: 18px;
+    max-width: 540px;
+    margin: 0 auto 48px;
+  }
+
+  .hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    flex-wrap: wrap;
+    margin-bottom: 52px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-card);
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    margin-bottom: 52px;
+  }
+  .stat-item {
+    flex: 1;
+    min-width: 140px;
+    text-align: center;
+    padding: 24px 16px;
+    border-right: 1px solid var(--border);
+  }
+  .stat-item:last-child { border-right: none; }
+  .stat-num {
+    font-family: 'DM Serif Display', serif;
+    font-size: 30px;
+    color: var(--navy);
+  }
+  .stat-label { font-size: 12px; color: var(--mid); margin-top: 4px; }
+
+  .cta-group { display: flex; flex-direction: column; align-items: center; gap: 14px; }
+  .btn-primary {
+    display: inline-block;
+    background: var(--navy);
+    color: #fff;
+    padding: 17px 40px;
+    border-radius: var(--radius);
+    font-weight: 700;
+    font-size: 15px;
+    text-decoration: none;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+    transition: background .2s, transform .15s;
+  }
+  .btn-primary:hover { background: var(--blue); transform: translateY(-2px); }
+  .btn-outline {
+    display: inline-block;
+    border: 2px solid var(--navy);
+    color: var(--navy);
+    padding: 14px 32px;
+    border-radius: var(--radius);
+    font-weight: 600;
+    font-size: 14px;
+    text-decoration: none;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    transition: all .2s;
+  }
+  .btn-outline:hover { background: var(--navy); color: #fff; }
+  .cta-note { font-size: 12px; color: var(--mid); }
+
+  /* ── PROOF STRIP ── */
+  .proof-strip {
+    background: var(--navy);
+    padding: 16px 6%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+    flex-wrap: wrap;
+    font-size: 13px;
+    color: rgba(255,255,255,.7);
+    font-weight: 500;
+  }
+  .proof-strip strong { color: #fff; }
+  .proof-dot { color: rgba(255,255,255,.25); }
+
+  /* ── SECTIONS ── */
+  section { padding: 72px 6%; }
+  .section-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--blue);
+    margin-bottom: 12px;
+  }
+  h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(28px, 3.5vw, 44px);
+    color: var(--navy);
+    line-height: 1.15;
+    margin-bottom: 14px;
+  }
+  .section-sub { color: var(--mid); font-size: 17px; max-width: 540px; margin-bottom: 44px; }
+
+  /* ── PROBLEM ── */
+  .problem { background: var(--white); }
+  .problem-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+    margin-top: 40px;
+  }
+  .problem-card {
+    background: #FFF5F5;
+    border: 1px solid #FCCFCF;
+    border-radius: var(--radius-card);
+    padding: 22px;
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+  }
+  .problem-card .icon { font-size: 18px; flex-shrink: 0; margin-top: 2px; }
+  .problem-card p { font-size: 14px; color: #6B1F1F; font-weight: 500; }
+
+  /* ── HOW IT WORKS ── */
+  .how { background: var(--bg-soft); }
+  .steps { display: flex; flex-direction: column; gap: 28px; max-width: 640px; }
+  .step { display: flex; gap: 22px; align-items: flex-start; }
+  .step-num {
+    flex-shrink: 0;
+    width: 42px; height: 42px;
+    background: var(--navy);
+    color: #fff;
+    border-radius: 50%;
+    font-family: 'DM Serif Display', serif;
+    font-size: 20px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .step-content h3 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 21px;
+    color: var(--navy);
+    margin-bottom: 6px;
+  }
+  .step-content p { color: var(--mid); font-size: 15px; }
+
+  /* ── INCLUDES ── */
+  .includes { background: var(--white); }
+  .includes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 14px;
+    margin-top: 40px;
+  }
+  .include-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--bg-soft);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-card);
+    padding: 16px 18px;
+  }
+  .check {
+    flex-shrink: 0;
+    width: 22px; height: 22px;
+    background: var(--navy);
+    color: #fff;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 12px;
+  }
+  .include-item p { font-size: 14px; font-weight: 600; color: var(--navy); }
+
+  /* ── TESTIMONIALS ── */
+  .testimonials { background: var(--navy); }
+  .testimonials h2 { color: #fff; }
+  .testimonials .section-label { color: #7EB3FF; }
+  .testi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 18px;
+    margin-top: 40px;
+  }
+  .testi-card {
+    background: rgba(255,255,255,.07);
+    border: 1px solid rgba(255,255,255,.12);
+    border-radius: var(--radius-card);
+    padding: 26px;
+  }
+  .testi-amount {
+    font-family: 'DM Serif Display', serif;
+    font-size: 28px;
+    color: #7EB3FF;
+    margin-bottom: 12px;
+  }
+  .testi-quote { font-size: 14px; color: rgba(255,255,255,.75); margin-bottom: 18px; line-height: 1.65; }
+  .testi-author { font-size: 12px; font-weight: 600; color: rgba(255,255,255,.4); text-transform: uppercase; letter-spacing: .06em; }
+  .testi-disclaimer { font-size: 11px; color: rgba(255,255,255,.25); margin-top: 24px; }
+
+  /* ── GUARANTEE ── */
+  .guarantee {
+    background: var(--bg-soft);
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  .guarantee-badge {
+    flex-shrink: 0;
+    width: 120px; height: 120px;
+    background: var(--navy);
+    border-radius: 50%;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    color: #fff;
+    text-align: center;
+  }
+  .guarantee-badge .days { font-family: 'DM Serif Display', serif; font-size: 34px; color: #7EB3FF; }
+  .guarantee-badge .dias { font-size: 10px; letter-spacing: .1em; text-transform: uppercase; color: rgba(255,255,255,.6); }
+  .guarantee-text h3 { font-family: 'DM Serif Display', serif; font-size: 26px; color: var(--navy); margin-bottom: 10px; }
+  .guarantee-text p { color: var(--mid); font-size: 15px; max-width: 520px; }
+
+  /* ── PRICING ── */
+  .pricing { background: var(--white); text-align: center; }
+  .price-card {
+    max-width: 420px;
+    margin: 40px auto 0;
+    background: var(--bg-soft);
+    border: 2px solid var(--navy);
+    border-radius: 20px;
+    padding: 40px;
+  }
+  .price-eyebrow { font-size: 12px; color: var(--mid); font-weight: 500; margin-bottom: 8px; text-transform: uppercase; letter-spacing: .08em; }
+  .price-tag { font-family: 'DM Serif Display', serif; font-size: 60px; color: var(--navy); margin: 12px 0 4px; }
+  .price-tag sup { font-size: 28px; vertical-align: top; margin-top: 16px; }
+  .price-sub { color: var(--mid); font-size: 13px; margin-bottom: 28px; }
+  .price-divider { border: none; border-top: 1px solid var(--border); margin: 22px 0; }
+  .cuotas-link {
+    display: block;
+    color: var(--blue);
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    margin-top: 14px;
+  }
+  .cuotas-link:hover { text-decoration: underline; }
+
+  /* ── FAQ ── */
+  .faq { background: var(--bg-soft); }
+  .faq-list { max-width: 660px; margin-top: 40px; }
+  details { border-bottom: 1px solid var(--border); padding: 20px 0; }
+  summary {
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--navy);
+  }
+  summary::after { content: '+'; font-size: 20px; color: var(--blue); }
+  details[open] summary::after { content: '−'; }
+  details p { color: var(--mid); font-size: 14px; margin-top: 12px; }
+
+  /* ── FINAL CTA ── */
+  .final-cta {
+    background: var(--navy);
+    color: #fff;
+    text-align: center;
+    padding: 80px 6%;
+  }
+  .final-cta h2 { color: #fff; margin-bottom: 12px; }
+  .final-cta p { color: rgba(255,255,255,.7); font-size: 17px; margin-bottom: 36px; }
+  .btn-white {
+    display: inline-block;
+    background: #fff;
+    color: var(--navy);
+    padding: 17px 44px;
+    border-radius: var(--radius);
+    font-weight: 700;
+    font-size: 14px;
+    text-decoration: none;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+    transition: transform .15s;
+  }
+  .btn-white:hover { transform: translateY(-2px); }
+
+  /* ── FOOTER ── */
+  footer {
+    background: #111A2E;
+    color: rgba(255,255,255,.35);
+    text-align: center;
+    padding: 28px 6%;
+    font-size: 12px;
+  }
+  footer a { color: rgba(255,255,255,.35); }
+
+  @media (max-width: 600px) {
+    .hero-stats { flex-direction: column; }
+    .stat-item { border-right: none; border-bottom: 1px solid var(--border); }
+    .stat-item:last-child { border-bottom: none; }
+    .guarantee { flex-direction: column; text-align: center; }
+    .guarantee-badge { margin: 0 auto; }
+  }
+</style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  ⚡ Sistema activo en más de <strong>500 franquiciados</strong> — <span>Garantía de resultados de 12 meses</span>
+</div>
+
+<!-- NAV -->
+<nav>
+  <a class="logo" href="https://ia.tri-bah.com">Tribah <span>IA</span></a>
+  <a class="nav-cta" href="https://go.hotmart.com/D105830778Y?ap=5173" target="_blank">Ver clase gratis →</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-eyebrow">Franquicia Digital con IA · Solo $97 USD</div>
+  <h1>El sistema que genera comisiones <em>mientras tú duermes</em></h1>
+  <p class="hero-sub">Sin crear productos. Sin experiencia previa. Sin miles de seguidores. Solo activa y recibe el 50% de comisión por cada venta.</p>
+
+  <div class="hero-stats">
+    <div class="stat-item">
+      <div class="stat-num">$10M+</div>
+      <div class="stat-label">Facturados en el sistema</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">500+</div>
+      <div class="stat-label">Franquiciados activos</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">50%</div>
+      <div class="stat-label">Comisión por venta</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">24/7</div>
+      <div class="stat-label">Sistema automatizado</div>
+    </div>
+  </div>
+
+  <div class="cta-group">
+    <a class="btn-primary" href="https://go.hotmart.com/D105830778Y?ap=5173" target="_blank">🎬 Ver la clase gratuita ahora</a>
+    <a class="btn-outline" href="https://go.hotmart.com/D105830778Y?ap=15e3" target="_blank">Activar mi franquicia — $97 USD</a>
+    <span class="cta-note">Sin compromiso · Acceso inmediato · Garantía de 7 días</span>
+  </div>
+</section>
+
+<!-- PROOF STRIP -->
+<div class="proof-strip">
+  <span>✅ Producto verificado en Hotmart</span>
+  <span class="proof-dot">·</span>
+  <span>✅ <strong>+500</strong> franquiciados activos</span>
+  <span class="proof-dot">·</span>
+  <span>✅ Garantía de devolución total</span>
+  <span class="proof-dot">·</span>
+  <span>✅ Pagos directos a tu cuenta</span>
+</div>
+
+<!-- PROBLEM -->
+<section class="problem">
+  <div class="section-label">¿Te identificas?</div>
+  <h2>Por qué la mayoría fracasa en los negocios digitales</h2>
+  <p class="section-sub">No es tu culpa. El modelo estaba roto desde el inicio.</p>
+  <div class="problem-grid">
+    <div class="problem-card"><div class="icon">❌</div><p>Compraron un curso sin sistema de ventas incluido</p></div>
+    <div class="problem-card"><div class="icon">❌</div><p>Perdieron meses creando productos sin saber si alguien los quiere</p></div>
+    <div class="problem-card"><div class="icon">❌</div><p>Dependen de tener miles de seguidores para vender algo</p></div>
+    <div class="problem-card"><div class="icon">❌</div><p>Invirtieron en publicidad sin embudo probado y perdieron dinero</p></div>
+    <div class="problem-card"><div class="icon">❌</div><p>Trabajaron solos, sin comunidad ni acompañamiento real</p></div>
+    <div class="problem-card"><div class="icon">❌</div><p>Se rindieron antes de ver resultados porque el camino era demasiado largo</p></div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how">
+  <div class="section-label">Cómo funciona</div>
+  <h2>3 pasos para generar ingresos en automático</h2>
+  <p class="section-sub">El sistema hace el trabajo pesado. Tú recibes las comisiones.</p>
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-content">
+        <h3>Activa tu Franquicia</h3>
+        <p>Todo está listo desde el primer día: videos de venta grabados, páginas de captación diseñadas, embudos configurados y mensajes automatizados. Tu único trabajo es activar el acceso.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-content">
+        <h3>La IA atrae y convierte clientes</h3>
+        <p>El sistema usa inteligencia artificial para encontrar personas que ya buscan oportunidades digitales. Los lleva a una clase gratuita que explica todo, y el embudo convierte prospectos en compradores automáticamente.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-content">
+        <h3>Tú recibes las comisiones</h3>
+        <p>Por cada venta generada a través de tu enlace único, recibes ~$48 USD (50% de comisión). Sin límite de ventas. Los pagos llegan directamente a tu cuenta via Hotmart.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INCLUDES -->
+<section class="includes">
+  <div class="section-label">Todo incluido</div>
+  <h2>Lo que recibes al activar hoy</h2>
+  <div class="includes-grid">
+    <div class="include-item"><div class="check">✓</div><p>50% de comisión por venta (~$48 USD)</p></div>
+    <div class="include-item"><div class="check">✓</div><p>Sistema de ventas 100% automatizado con IA</p></div>
+    <div class="include-item"><div class="check">✓</div><p>Rich Academy — entrenamiento completo de marketing</p></div>
+    <div class="include-item"><div class="check">✓</div><p>Rich System — sistema de ventas inteligente</p></div>
+    <div class="include-item"><div class="check">✓</div><p>IA Partners — academia de inteligencia artificial</p></div>
+    <div class="include-item"><div class="check">✓</div><p>Magneto AI — herramienta para crear productos digitales</p></div>
+    <div class="include-item"><div class="check">✓</div><p>Comunidad privada + sesiones de acompañamiento</p></div>
+    <div class="include-item"><div class="check">✓</div><p>Visual Hackers — academia de creación de anuncios</p></div>
+    <div class="include-item"><div class="check">✓</div><p>Método Orgánico — vender por Instagram sin seguidores</p></div>
+    <div class="include-item"><div class="check">✓</div><p>Soporte continuo del equipo de Franquicia IA</p></div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials">
+  <div class="section-label">Resultados reales</div>
+  <h2>Personas comunes, resultados reales</h2>
+  <div class="testi-grid">
+    <div class="testi-card">
+      <div class="testi-amount">$712 USD</div>
+      <p class="testi-quote">"Desde que activé la franquicia llego a fin de mes sin problemas. Ya no vivo con la angustia económica de antes."</p>
+      <div class="testi-author">Jorge · Empleado de tiempo completo</div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-amount">$1,743 USD</div>
+      <p class="testi-quote">"He ganado más o menos $1,743 dólares y lo mejor es que puedo hacerlo desde cualquier lugar. Desde casa, de viaje, donde sea."</p>
+      <div class="testi-author">Valeria · Mamá emprendedora</div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-amount">$427/semana</div>
+      <p class="testi-quote">"Había perdido $412 en otros negocios. Tres semanas después de activar la franquicia cambió todo."</p>
+      <div class="testi-author">Franquiciado activo · 3 semanas después</div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-amount">Ingresos extra</div>
+      <p class="testi-quote">"Antes vivía estresada porque el dinero no me alcanzaba. Ahora puedo estudiar y hacer dinero a la vez."</p>
+      <div class="testi-author">Sofi · Estudiante universitaria</div>
+    </div>
+  </div>
+  <p class="testi-disclaimer">* Resultados no típicos ni garantizados. Los resultados dependen del esfuerzo, dedicación y habilidades de cada persona.</p>
+</section>
+
+<!-- GUARANTEE -->
+<section class="guarantee">
+  <div class="guarantee-badge">
+    <div class="days">7</div>
+    <div class="dias">días</div>
+  </div>
+  <div class="guarantee-text">
+    <h3>Sin riesgo. Garantía doble.</h3>
+    <p><strong>7 días</strong> de garantía total sin preguntas — devolución del 100% si no es para ti.<br/><br/>
+    <strong>12 meses</strong> de garantía de resultados — si no generas $10,000 USD siguiendo el sistema, te devuelven tu inversión completa.</p>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing">
+  <div class="section-label">Inversión</div>
+  <h2>Empieza hoy por menos de lo que cuesta una cena</h2>
+  <div class="price-card">
+    <div class="price-eyebrow">Acceso completo · Franquicia IA</div>
+    <div class="price-tag"><sup>$</sup>97</div>
+    <div class="price-sub">USD · Pago único · Acceso inmediato</div>
+    <a class="btn-primary" style="display:block;text-align:center;" href="https://go.hotmart.com/D105830778Y?ap=5173" target="_blank">🎬 Ver la clase gratuita primero</a>
+    <hr class="price-divider" />
+    <a class="btn-outline" style="display:block;text-align:center;" href="https://go.hotmart.com/D105830778Y?ap=15e3" target="_blank">Activar ahora — $97 USD</a>
+    <a class="cuotas-link" href="https://go.hotmart.com/D105830778Y?ap=6cc8" target="_blank">💳 También disponible en 2 cuotas</a>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="section-label">Preguntas frecuentes</div>
+  <h2>Lo que todos preguntan</h2>
+  <div class="faq-list">
+    <details>
+      <summary>¿Necesito experiencia previa en marketing o tecnología?</summary>
+      <p>No. El sistema está diseñado para personas sin experiencia. Todo está listo y configurado desde el primer día. Solo necesitas activarlo.</p>
+    </details>
+    <details>
+      <summary>¿Cuánto tiempo lleva ver los primeros resultados?</summary>
+      <p>Algunos franquiciados generan sus primeras comisiones en la primera semana. Los resultados dependen de tu ejecución y consistencia.</p>
+    </details>
+    <details>
+      <summary>¿Necesito tener muchos seguidores o una audiencia?</summary>
+      <p>No. El sistema incluye el Método Orgánico para vender sin seguidores, y también puedes usar publicidad pagada para escalar más rápido.</p>
+    </details>
+    <details>
+      <summary>¿Cómo y cuándo recibo mis comisiones?</summary>
+      <p>Las comisiones (~$48 por venta) se depositan directamente en tu cuenta de Hotmart según los períodos establecidos por la plataforma.</p>
+    </details>
+    <details>
+      <summary>¿Qué pasa si no funciona para mí?</summary>
+      <p>Tienes 7 días de garantía total sin preguntas. Y si en 12 meses no generas $10,000 USD siguiendo el sistema, recibes devolución completa.</p>
+    </details>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <h2>La vida no cambia con intenciones,<br/>cambia con decisiones.</h2>
+  <p>Más de 500 personas ya activaron su franquicia. ¿Cuándo lo haces tú?</p>
+  <a class="btn-white" href="https://go.hotmart.com/D105830778Y?ap=5173" target="_blank">🎬 Ver la clase gratuita — sin compromiso</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 Tribah IA · Soluciones Digitales · <a href="#">Política de privacidad</a><br/>
+  Tribah IA puede recibir comisión por compras realizadas desde esta página. Los resultados dependen de tu ejecución, seguimiento, tráfico y consistencia.</p>
+</footer>
+
+</body>
+</html>
